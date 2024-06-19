@@ -1,0 +1,131 @@
+<%- include("partials/header.ejs") %> <%- include("partials/navbar.ejs") %>
+<!-- <br>
+<div class="background " >
+<div class="contents">
+  <form action="home.ejs">
+    <form>
+        <form>
+            <div class="form-group" title>
+              <label for="formGroupExampleInput" class="formTitle">Title for Blog</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+            </div>
+            <div class="form-group introduction">
+              <label for="formGroupExampleInput2" class="formTitle">Introduction</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+            </div>
+            <div class="form-group description">
+                <label for="formGroupExampleInput2" class="formTitle">Description</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+              </div>
+          </form>
+          <div class="form-group image1">
+            <label for="exampleFormControlFile1" class="formTitle">Image 1</label>
+            <input type="file" class="form-control-file hey" id="exampleFormControlFile1">
+          </div>
+          <div class="form-group image2">
+            <label for="exampleFormControlFile1" class="formTitle">Image 2</label>
+            <input type="file" class="form-control-file hey" id="exampleFormControlFile1">
+          </div>
+          <div class="form-group image3">
+            <label for="exampleFormControlFile1" class="formTitle">Image 3</label>
+            <input type="file" class="form-control-file hey" id="exampleFormControlFile1">
+          </div>
+        <div class="form-group Thumbnail">
+          <label for="exampleFormControlFile1" class="formTitle">Thumbnail</label>
+          <input type="file" class="form-control-file hey" id="exampleFormControlFile1">
+        </div>
+
+
+        <form action="/content" method="POST"  >
+            <input class="submit" type="submit" value="Submit">
+          </form>
+      </form>
+      <br><br><br>
+</form>
+</div>
+</div> -->
+
+
+<div class="background">
+  <div class="contents">
+    <h1>New Blog Post</h1>
+    <form action="/content" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="formGroupExampleInput">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="formGroupExampleInput"
+          name="title"
+          placeholder="Title"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Introduction</label>
+        <input
+          type="text"
+          class="form-control"
+          id="formGroupExampleInput2"
+          name="introduction"
+          placeholder="Introduction"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="formGroupExampleInput2"
+          name="description"
+          placeholder="Description"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Image 1</label>
+        <input
+          type="file"
+          class="form-control-file"
+          id="exampleFormControlFile1"
+          name="image1"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlFile2">Image 2</label>
+        <input
+          type="file"
+          class="form-control-file"
+          id="exampleFormControlFile2"
+          name="image2"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlFile3">Image 3</label>
+        <input
+          type="file"
+          class="form-control-file"
+          id="exampleFormControlFile3"
+          name="image3"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlThumbnail">Thumbnail</label>
+        <input
+          type="file"
+          class="form-control-file"
+          id="exampleFormControlThumbnail"
+          name="thumbnail"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  
+  </div>
+  
+</div>
+<footer style="background-color: rgb(62, 62, 62,1);  color: aliceblue; display: flex; align-items: center; justify-content: center;padding: 40px;">
+  all rights reserved @medha
+</footer>

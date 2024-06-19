@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+<%- include("partials/navbar.ejs") %>
+<div class="background" style="background-image: url('<%= blog.thumbnail %>'); background-size: cover; background-position: center;">
+    <div class="contents">
+        <h1><%= blog.title %></h1>
+        <p><strong>Introduction:</strong> <%= blog.introduction %></p>
+        <p><strong>Description:</strong> <%= blog.description %></p>
+        <p><strong>Images:</strong></p>
+        <% if (blog.image1) { %>
+            <img src="<%= blog.image1 %>" alt="Image 1">
+        <% } %>
+        <% if (blog.image2) { %>
+            <img src="<%= blog.image2 %>" alt="Image 2">
+        <% } %>
+        <% if (blog.image3) { %>
+            <img src="<%= blog.image3 %>" alt="Image 3">
+        <% } %>
+
+        <form action="/blogs/<%= blog.id %>/delete" method="POST" style="margin-top: 20px;">
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+        <form action="/blogs/<%= blog.id %>/update" method="GET" style="margin-top: 20px;">
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</div>
+<footer style="background-color: rgb(62, 62, 62,1);  color: aliceblue; display: flex; align-items: center; justify-content: center;padding: 40px;">
+    all rights reserved @medha
+  </footer>
