@@ -5,7 +5,7 @@ import path from "path";
 import { v4 as uuidv4 } from "uuid";
 
 const app = express();
-const port = 3000;
+const port = 3000; 
 
 // Set up body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -137,6 +137,6 @@ app.post(
   }
 );
 
-app.listen(port, function () {
+app.listen(process.env.PORT||port, function () {
   console.log(`listening on port ${port}`);
 });
