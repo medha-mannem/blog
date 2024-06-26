@@ -1,0 +1,42 @@
+<%- include("partials/header.ejs") %>
+<%- include("partials/navbar.ejs") %>
+<br>
+<div class="background">
+    <div class="content">
+        <h1>Update Blog</h1>
+        <form action="/blogs/<%= blog.id %>/update" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="formGroupExampleInput">Title</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" name="title" placeholder="Title" value="<%= blog.title %>">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Introduction</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" name="introduction" placeholder="Introduction" value="<%= blog.introduction %>">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Description</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" name="description" placeholder="Description" value="<%= blog.description %>">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Image 1</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image1">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile2">Image 2</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile2" name="image2">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile3">Image 3</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile3" name="image3">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlThumbnail">Thumbnail</label>
+                <input type="file" class="form-control-file" id="exampleFormControlThumbnail" name="thumbnail">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</div>
+<footer style="background-color: rgb(62, 62, 62,1);  color: aliceblue; display: flex; align-items: center; justify-content: center;padding: 40px;">
+    all rights reserved @medha
+  </footer>

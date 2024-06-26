@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+<%- include("partials/navbar.ejs") %>
+<div class="background">
+    <div class="contents">
+        <h1>All Blogs</h1>
+        <div class="row">
+            <% blogs.forEach(blog => { %>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="<%= blog.thumbnail %>" class="card-img-top" alt="Thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= blog.title %></h5>
+                            <p class="card-text"><%= blog.introduction %></p>
+                            <a href="/blogs/<%= blog.id %>" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+<footer style="background-color: rgb(62, 62, 62,1);  color: aliceblue; display: flex; align-items: center; justify-content: center;padding: 40px;">
+    all rights reserved @medha
+  </footer>
