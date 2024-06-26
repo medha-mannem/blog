@@ -5,12 +5,12 @@ import path from "path";
 import { v4 as uuidv4 } from "uuid";
 
 const app = express();
-const port = 3000; 
+const port = process.env.PORT || 3000; // Use process.env.PORT for deployment
 
 // Set up body-parser
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
-app.set("view engine", "ejs");
+app.use(express.static("public")); // Serve static files from the 'public' directory
+app.set("view engine", "ejs"); // Set 'ejs' as the view engine
 
 // Configure multer for file uploads
 const storage = multer.diskStorage({
@@ -26,7 +26,7 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-// In-memory storage for blogs
+// In-memory storage for blogs (replace with database in production)
 let blogs = [];
 
 // Route handlers
@@ -137,6 +137,7 @@ app.post(
   }
 );
 
-app.listen(process.env.PORT||port, function () {
-  console.log(`listening on port ${port}`);
+// Start server
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
